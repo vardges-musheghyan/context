@@ -1,20 +1,18 @@
+import Header from "./components/header";
+import ComponentX from "./components/componentX";
+import LanguageContextProvider from "./components/hooks/useLanguageContext/languageContextComponent";
 
-import UserContext from "./userContext";
+function App(){
 
-import Component from './components/Component'
-
-
-function App() {
-  return (
-      <>
-      <UserContext>
-    <div className="App">
-      Hello
-    </div>
-          <Component />
-      </UserContext>
-      </>
-  );
+    return (
+        <LanguageContextProvider >
+        <div>
+            <Header />
+            <ComponentX/>
+        </div>
+        </LanguageContextProvider>
+    )
 }
+
 
 export default App;
